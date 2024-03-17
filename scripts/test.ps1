@@ -1,0 +1,1 @@
+dotnet test $PSScriptRoot\..\Aspectify.sln -c Release -l trx --verbosity=normal

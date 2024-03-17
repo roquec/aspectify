@@ -1,0 +1,1 @@
+dotnet build $PSScriptRoot\..\Aspectify.sln -c Release
