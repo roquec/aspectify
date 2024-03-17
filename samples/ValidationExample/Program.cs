@@ -13,8 +13,8 @@ var host = SampleHost.BuildHost(
         .AddTransient<Client>()
         .AddTransient<CreateUserFeature>()
         .AddTransient<IValidator<CreateUserRequest>, CreateUserRequestValidator>()
-        .AddTransient<IConcern, LoggingConcern>()
-        .AddTransient<IConcern, ValidationConcern>(),
+        .AddTransient(typeof(IConcern<,>), typeof(LoggingConcern<,>))
+        .AddTransient(typeof(IConcern<,>), typeof(ValidationConcern<,>)),
     configure => configure
         .UseFeatures()
 );

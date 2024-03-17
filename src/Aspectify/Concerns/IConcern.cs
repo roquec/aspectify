@@ -2,9 +2,11 @@
 
 namespace Aspectify.Concerns;
 
-public interface IConcern
+public interface IConcern<TRequest, TResult>
 {
-    public Task<ExecutionStatus> Before<TRequest, TResult>(IFeature<TRequest, TResult> feature, TRequest request);
+    public void SetContext(ExecutionContext context);
 
-    public Task After<TRequest, TResult>(IFeature<TRequest, TResult> feature, TRequest request, TResult result);
+    public Task Before(IFeature<TRequest, TResult> feature, TRequest request);
+
+    public Task After(IFeature<TRequest, TResult> feature, TRequest request, TResult result);
 }

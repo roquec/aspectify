@@ -2,14 +2,21 @@
 
 namespace Aspectify.Concerns;
 
-public abstract class Concern : IConcern
+public abstract class Concern<TRequest, TResult> : IConcern<TRequest, TResult>
 {
-    public virtual Task<ExecutionStatus> Before<TRequest, TResult>(IFeature<TRequest, TResult> feature, TRequest request)
+    public ExecutionContext Context { get; private set; } = new ();
+
+    public void SetContext(ExecutionContext context)
     {
-        return Task.FromResult(ExecutionStatus.Continue);
+        Context = context;
     }
 
-    public virtual Task After<TRequest, TResult>(IFeature<TRequest, TResult> feature, TRequest request, TResult result)
+    public virtual Task Before(IFeature<TRequest, TResult> feature, TRequest request)
+    {
+        return Task.CompletedTask;
+    }
+
+    public virtual Task After(IFeature<TRequest, TResult> feature, TRequest request, TResult result)
     {
         return Task.CompletedTask;
     }

@@ -10,7 +10,7 @@ var host = SampleHost.BuildHost(
     services => services
         .AddTransient<Client>()
         .AddTransient<GetGreetingByNameFeature>()
-        .AddTransient<IConcern, LoggingConcern>(),
+        .AddTransient(typeof(IConcern<,>), typeof(LoggingConcern<,>)),
     configure => configure
         .UseFeatures()
 );

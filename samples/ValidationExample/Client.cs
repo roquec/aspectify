@@ -1,4 +1,5 @@
-﻿using Aspectify.Features;
+﻿using Aspectify;
+using Aspectify.Features;
 using ValidationExample.CreateUser;
 
 namespace ValidationExample;
@@ -11,7 +12,7 @@ public class Client
     {
         _createUserFeature = createUserFeature;
     }
-    
+
     public async Task Run()
     {
         var request = new CreateUserRequest
