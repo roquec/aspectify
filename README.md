@@ -1,3 +1,3 @@
 # Aspectify
 
-Library for automated application of cross-cutting concerns on feature execution
+Library for automated application of cross-cutting concerns over feature execution

@@ -20,21 +20,29 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspectify.Logging.OpenTelem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspectify.Validation.FluentValidation", "src\concerns\Aspectify.Validation.FluentValidation\Aspectify.Validation.FluentValidation.csproj", "{FB3DC736-89BE-4665-911B-9D44974930B3}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C915B050-FE09-4881-AB3E-20A71A5517B5}"
-	ProjectSection(SolutionItems) = preProject
-		.editorconfig = .editorconfig
-		README.md = README.md
-		.gitignore = .gitignore
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{40C8E8DB-97DF-4901-9C47-2872DCE6D468}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{F30C8BD6-9BD7-4C48-BD6F-4C808F6F0054}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".dev", ".dev", "{D28622E1-E622-4A5E-ADE8-AAB03B499D1E}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{EB688559-A0BF-4E10-A03E-9D9EB3FE0231}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{9B4F4DAB-ADA8-4548-8D59-BD8EF318507E}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\cd.yml = .github\workflows\cd.yml
+		.github\workflows\ci.yml = .github\workflows\ci.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{7921197D-5833-4506-A915-B5DDC60C0144}"
 	ProjectSection(SolutionItems) = preProject
 		scripts\build.ps1 = scripts\build.ps1
+		scripts\test.ps1 = scripts\test.ps1
 		scripts\clean.ps1 = scripts\clean.ps1
 		scripts\pack.ps1 = scripts\pack.ps1
-		scripts\test.ps1 = scripts\test.ps1
 	EndProjectSection
 EndProject
 Global
@@ -81,5 +89,8 @@ Global
 		{FB3DC736-89BE-4665-911B-9D44974930B3} = {3C8F02F6-7798-4C4C-8689-5B8F2FCE6249}
 		{10DABB78-B82A-4DE0-B740-CD8147F0BD90} = {40C8E8DB-97DF-4901-9C47-2872DCE6D468}
 		{3C8F02F6-7798-4C4C-8689-5B8F2FCE6249} = {40C8E8DB-97DF-4901-9C47-2872DCE6D468}
+		{EB688559-A0BF-4E10-A03E-9D9EB3FE0231} = {D28622E1-E622-4A5E-ADE8-AAB03B499D1E}
+		{9B4F4DAB-ADA8-4548-8D59-BD8EF318507E} = {EB688559-A0BF-4E10-A03E-9D9EB3FE0231}
+		{7921197D-5833-4506-A915-B5DDC60C0144} = {D28622E1-E622-4A5E-ADE8-AAB03B499D1E}
 	EndGlobalSection
 EndGlobal
