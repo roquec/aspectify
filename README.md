@@ -1,2 +1,3 @@
-# features
-Library for clean slim features in .NET with pipeline execution for cross-cutting concerns
+# Aspectify
+
+Library for automated application of cross-cutting concerns on feature execution
